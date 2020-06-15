@@ -20,6 +20,12 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface SlSidenav {
+    }
+    interface SlSidenavMaincontent {
+    }
+    interface SlSidenavPage {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +34,29 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSlSidenavElement extends Components.SlSidenav, HTMLStencilElement {
+    }
+    var HTMLSlSidenavElement: {
+        prototype: HTMLSlSidenavElement;
+        new (): HTMLSlSidenavElement;
+    };
+    interface HTMLSlSidenavMaincontentElement extends Components.SlSidenavMaincontent, HTMLStencilElement {
+    }
+    var HTMLSlSidenavMaincontentElement: {
+        prototype: HTMLSlSidenavMaincontentElement;
+        new (): HTMLSlSidenavMaincontentElement;
+    };
+    interface HTMLSlSidenavPageElement extends Components.SlSidenavPage, HTMLStencilElement {
+    }
+    var HTMLSlSidenavPageElement: {
+        prototype: HTMLSlSidenavPageElement;
+        new (): HTMLSlSidenavPageElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "sl-sidenav": HTMLSlSidenavElement;
+        "sl-sidenav-maincontent": HTMLSlSidenavMaincontentElement;
+        "sl-sidenav-page": HTMLSlSidenavPageElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +74,17 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface SlSidenav {
+    }
+    interface SlSidenavMaincontent {
+    }
+    interface SlSidenavPage {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "sl-sidenav": SlSidenav;
+        "sl-sidenav-maincontent": SlSidenavMaincontent;
+        "sl-sidenav-page": SlSidenavPage;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +92,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "sl-sidenav": LocalJSX.SlSidenav & JSXBase.HTMLAttributes<HTMLSlSidenavElement>;
+            "sl-sidenav-maincontent": LocalJSX.SlSidenavMaincontent & JSXBase.HTMLAttributes<HTMLSlSidenavMaincontentElement>;
+            "sl-sidenav-page": LocalJSX.SlSidenavPage & JSXBase.HTMLAttributes<HTMLSlSidenavPageElement>;
         }
     }
 }
