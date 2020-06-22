@@ -6,3 +6,7 @@ export function format(first: string, middle: string, last: string): string {
     (last ? ` ${last}` : '')
   );
 }
+
+export function changeGlobalThemeVariables(incomingVars: any): void {
+  console.log(incomingVars);
+}

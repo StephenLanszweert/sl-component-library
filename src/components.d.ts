@@ -21,6 +21,10 @@ export namespace Components {
         "middle": string;
     }
     interface SlSidenav {
+        "changeComponentCss": (incoming: any) => Promise<void>;
+        "changeGlobalCss": (incoming: any) => Promise<void>;
+        "theme": any;
+        "width": any;
     }
     interface SlSidenavMaincontent {
     }
@@ -75,6 +79,8 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface SlSidenav {
+        "theme"?: any;
+        "width"?: any;
     }
     interface SlSidenavMaincontent {
     }

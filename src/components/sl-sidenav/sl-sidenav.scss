@@ -1,12 +1,9 @@
-:host {
-  display: block;
-}
-
 .navbar {
-  width: 25vw;
+  --main-color: blue;
+  width: 25%;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: red;
+  background-color: var(--main-color);
 }

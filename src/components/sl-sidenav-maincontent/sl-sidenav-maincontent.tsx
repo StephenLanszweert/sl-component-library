@@ -1,14 +1,14 @@
-import { Component, ComponentInterface, Host, h } from "@stencil/core";
+import { Component, ComponentInterface, h } from "@stencil/core";
 
 @Component({
   tag: "sl-sidenav-maincontent",
   styleUrl: "sl-sidenav-maincontent.scss",
-  shadow: true,
+  scoped: true,
 })
 export class SlSidenavMaincontent implements ComponentInterface {
   render() {
     return (
-      <div class="navbar">
+      <div class="main">
         <h1>test</h1>
       </div>
     );

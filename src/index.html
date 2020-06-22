@@ -7,11 +7,30 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
     />
     <title>Stencil Component Starter</title>
-
+    <link rel="stylesheet" href="./index.css" />
     <script type="module" src="/build/sl-component-library.esm.js"></script>
     <script nomodule src="/build/sl-component-library.js"></script>
+    <link rel="stylesheet" href="/build/sl-component-library.css" />
   </head>
   <body>
-    <sl-sidenav></sl-sidenav>
+    <sl-sidenav theme="default" width="20">
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>More about us</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </sl-sidenav>
+    <div class="navbar">
+      <h1>Test</h1>
+    </div>
+    <!-- <sl-sidenav-maincontent></sl-sidenav-maincontent> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        let sidenav = document.querySelector("sl-sidenav");
+        sidenav.changeComponentCss("orange");
+      });
+    </script>
   </body>
 </html>
